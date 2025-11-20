@@ -1,6 +1,6 @@
 <template>
   <div style="padding: 10px; width: 260px">
-    <h3>Popup</h3>
+    <h3 class="title">Popup</h3>
     <p>Counter: {{ count }}</p>
     <button @click="inc">+</button>
     <button @click="dec">-</button>
@@ -16,3 +16,12 @@ const count = ref(0)
 const inc = () => count.value++
 const dec = () => count.value--
 </script>
+
+<style lang="scss">
+.title {
+  color: green;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+</style>

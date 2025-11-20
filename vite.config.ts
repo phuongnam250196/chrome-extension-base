@@ -23,11 +23,10 @@ export default defineConfig({
     rollupOptions: {
       input: {
         popup: resolve(__dirname, 'src/popup/index.html'),
-        background: resolve(__dirname, 'src/background/index.js'),
-        content: resolve(__dirname, 'src/content/index.js'),
+        background: resolve(__dirname, 'src/background/index.ts'),
+        content: resolve(__dirname, 'src/content/index.ts'),
       },
       output: {
-        // Thay đổi entryFileNames để đặt các tệp vào đúng thư mục
         entryFileNames: (chunkInfo) => {
           if (chunkInfo.name === 'background' || chunkInfo.name === 'content') {
             return `${chunkInfo.name}/index.js`
